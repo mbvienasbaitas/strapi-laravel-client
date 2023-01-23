@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace VienasBaitas\Strapi\Client\Laravel;
+namespace MBVienasBaitas\Strapi\Client\Laravel;
 
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
-use VienasBaitas\Strapi\Client\Client;
-use VienasBaitas\Strapi\Client\Laravel\Contracts\Factory;
+use MBVienasBaitas\Strapi\Client\Client;
+use MBVienasBaitas\Strapi\Client\Laravel\Contracts\Factory;
 
 class StrapiServiceProvider extends ServiceProvider implements DeferrableProvider
 {

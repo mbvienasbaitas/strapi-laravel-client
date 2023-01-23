@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "VienasBaitas\\Strapi\\Client\\Laravel\\": "src"
+            "MBVienasBaitas\\Strapi\\Client\\Laravel\\": "src"
         }
     },
     "autoload-dev": {
@@ -42,7 +42,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VienasBaitas\\Strapi\\Client\\Laravel\\StrapiServiceProvider"
+                "MBVienasBaitas\\Strapi\\Client\\Laravel\\StrapiServiceProvider"
             ]
         }
     }

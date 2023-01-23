@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Tests;
 
 use InvalidArgumentException;
+use MBVienasBaitas\Strapi\Client\Client;
+use MBVienasBaitas\Strapi\Client\Laravel\Contracts\Factory;
+use MBVienasBaitas\Strapi\Client\Laravel\Facades\Strapi;
+use MBVienasBaitas\Strapi\Client\Laravel\StrapiServiceProvider;
 use Orchestra\Testbench\TestCase;
-use VienasBaitas\Strapi\Client\Client;
-use VienasBaitas\Strapi\Client\Laravel\Contracts\Factory;
-use VienasBaitas\Strapi\Client\Laravel\Facades\Strapi;
-use VienasBaitas\Strapi\Client\Laravel\StrapiServiceProvider;
 
 class StrapiManagerTest extends TestCase
 {
@@ -17,8 +17,8 @@ class StrapiManagerTest extends TestCase
     {
         parent::setUp();
 
-        \VienasBaitas\Strapi\Client\Laravel\Strapi::$clientResolveCallback = null;
-        \VienasBaitas\Strapi\Client\Laravel\Strapi::$requestFactoryResolveCallback = null;
+        \MBVienasBaitas\Strapi\Client\Laravel\Strapi::$clientResolveCallback = null;
+        \MBVienasBaitas\Strapi\Client\Laravel\Strapi::$requestFactoryResolveCallback = null;
     }
 
     protected function getPackageProviders($app)
@@ -82,7 +82,7 @@ class StrapiManagerTest extends TestCase
 
     public function testCustomClientResolverIsUsed(): void
     {
-        \VienasBaitas\Strapi\Client\Laravel\Strapi::resolveClientUsing(function () {
+        \MBVienasBaitas\Strapi\Client\Laravel\Strapi::resolveClientUsing(function () {
             throw new \Exception('Client resolver: I am failing...');
         });
 
@@ -96,7 +96,7 @@ class StrapiManagerTest extends TestCase
 
     public function testCustomRequestFactoryResolverIsUsed(): void
     {
-        \VienasBaitas\Strapi\Client\Laravel\Strapi::resolveRequestFactoryUsing(function () {
+        \MBVienasBaitas\Strapi\Client\Laravel\Strapi::resolveRequestFactoryUsing(function () {
             throw new \Exception('Request factory resolver: I am failing...');
         });
 

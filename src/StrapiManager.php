@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace VienasBaitas\Strapi\Client\Laravel;
+namespace MBVienasBaitas\Strapi\Client\Laravel;
 
 use Illuminate\Contracts\Foundation\Application;
 use InvalidArgumentException;
+use MBVienasBaitas\Strapi\Client\Client;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
-use VienasBaitas\Strapi\Client\Client;
 
 class StrapiManager implements Contracts\Factory
 {

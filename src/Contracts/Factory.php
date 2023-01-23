@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace VienasBaitas\Strapi\Client\Laravel\Contracts;
+namespace MBVienasBaitas\Strapi\Client\Laravel\Contracts;
 
-use VienasBaitas\Strapi\Client\Client;
+use MBVienasBaitas\Strapi\Client\Client;
 
 interface Factory
 {

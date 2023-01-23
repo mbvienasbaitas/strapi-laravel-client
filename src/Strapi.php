@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace VienasBaitas\Strapi\Client\Laravel;
+namespace MBVienasBaitas\Strapi\Client\Laravel;
 
 class Strapi
 {
